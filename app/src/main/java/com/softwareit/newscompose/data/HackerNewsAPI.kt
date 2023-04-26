@@ -10,5 +10,9 @@ interface HackerNewsAPI {
 
     @GET("item")
     suspend fun getItems(@Query("id") ids: String): List<NewsItem>
+
+    // Add this method to get top stories
+    @GET("topstories.json")
+    suspend fun getTopStories(): List<String>
 }
 
